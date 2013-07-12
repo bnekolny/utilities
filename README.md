@@ -26,6 +26,7 @@ Instructions for use
     ```$ git config --global --edit```
 
     at the bottom, append this:
-    ```[include]```
 
-    ```    path = "/path/to/repo/utilities/git/aliases.config"```
+    [include]
+
+        path = "/path/to/repo/utilities/git/aliases.config"
