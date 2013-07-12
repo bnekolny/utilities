@@ -17,9 +17,8 @@ Instructions for use
     ```source /path/to/repo/utilities/bashrc_include.sh```
  1. If desired, add your github credentials to your bashrc (without them all gists will be under anonymous)
 
-        ```export GITHUBUSERNAME="<username>"```
-
-        ```export GITHUBPASSWORD="<password>"```
+            export GITHUBUSERNAME="<username>"
+            export GITHUBPASSWORD="<password>"
 
 1. Add the git aliases to your git config (global) NOTE: Requires Git 1.7.10 or higher!
 
