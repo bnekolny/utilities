@@ -27,6 +27,5 @@ Instructions for use
 
     at the bottom, append this:
 
-    [include]
-
-        path = "/path/to/repo/utilities/git/aliases.config"
+        [include]
+            path = "/path/to/repo/utilities/git/aliases.config"
