@@ -18,4 +18,5 @@ Instructions for use
  1. If desired, add your github credentials to your bashrc (without them all gists will be under anonymous)
 
         ```export GITHUBUSERNAME="<username>"```
+
         ```export GITHUBPASSWORD="<password>"```
