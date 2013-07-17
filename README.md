@@ -20,11 +20,11 @@ Instructions for use
             export GITHUBUSERNAME="<username>"
             export GITHUBPASSWORD="<password>"
 
-1. Add the git aliases to your git config (global) ***NOTE: Requires Git 1.7.10 or higher!***
+1. Add the git settings to your git config (global) ***NOTE: Requires Git 1.7.10 or higher!***
 
     ```$ git config --global --edit```
 
     at the bottom, append this:
 
         [include]
-            path = "/path/to/repo/utilities/git/aliases.config"
+            path = "/path/to/repo/utilities/git_include.config"
