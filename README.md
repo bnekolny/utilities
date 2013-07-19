@@ -12,7 +12,7 @@ Goals
 
 Instructions for use
 -----------
-1. Source the `bashrc_include.sh` in your `~/.bashrc`
+1. Source the `bashrc_include.sh` in your `~/.bash_profile` (mac) or `~/.bashrc` (linux)
 
     ```source /path/to/repo/utilities/bashrc_include.sh```
  1. If desired, add your github credentials to your bashrc (without them all gists will be under anonymous)
