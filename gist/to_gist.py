@@ -9,27 +9,31 @@ import os
 
 # Request headers, will use basic auth so defining early
 headers = {}
- 
+
 top_level_url = 'https://api.github.com'
 gist_url = '%s/gists' % top_level_url
 
 gh_user = os.environ.get('GITHUBUSERNAME')
 gh_pass = os.environ.get('GITHUBPASSWORD')
+gh_token = os.environ.get('GITHUB_TOKEN')
 # If there is a username and password, add it
 if gh_user and gh_pass:
     auth = 'Basic ' + string.strip(base64.encodestring(gh_user + ':' + gh_pass))
     headers['Authorization'] = auth
- 
+elif gh_token:
+    auth = 'token {0}'.format(gh_token)
+    headers['Authorization'] = auth
+
 input = []
 for line in sys.stdin:
-  input.append(line)
+    input.append(line)
 
 # Check to see if there is any input
-filename="gistfile"
+filename = "gistfile"
 try:
     title = input[0].strip()
     if 'diff' in title:
-        filename+=".diff"
+        filename += ".diff"
 except IndexError as e:
     print "Nothing to Gist"
     sys.exit(3)
@@ -43,7 +47,7 @@ content = {
         }
     }
 }
- 
+
 #sys.exit(0)
 headers['content-type'] = 'application/json'
 req = urllib2.Request(url=gist_url, data=json.dumps(content), headers=headers)
