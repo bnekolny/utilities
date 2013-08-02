@@ -15,12 +15,17 @@ Instructions for use
 1. Source the `bashrc_include.sh` in your `~/.bash_profile` (mac) or `~/.bashrc` (linux)
 
     ```source /path/to/repo/utilities/bashrc_include.sh```
- 1. If desired, add your github credentials to your bashrc (without them all gists will be under anonymous)
+
+If desired, add your github credentials to your bashrc (without them all gists will be under anonymous)
 
             export GITHUBUSERNAME="<username>"
             export GITHUBPASSWORD="<password>"
 
-1. Add the git settings to your git config (global) ***NOTE: Requires Git 1.7.10 or higher!***
+or
+
+            export GITHUB_TOKEN="<token_generated_in_settings>"
+
+2. Add the git settings to your git config (global) ***NOTE: Requires Git 1.7.10 or higher!***
 
     ```$ git config --global --edit```
 
