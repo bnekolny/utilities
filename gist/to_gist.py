@@ -6,6 +6,7 @@ import base64
 import json
 import sys
 import os
+import re
 
 # Request headers, will use basic auth so defining early
 headers = {}
@@ -26,7 +27,8 @@ elif gh_token:
 
 input = []
 for line in sys.stdin:
-    input.append(line)
+    # Here we are taking out any color code information (in the case of a diff)
+    input.append(re.sub(r'\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]', r'', line))
 
 # Check to see if there is any input
 filename = "gistfile"
