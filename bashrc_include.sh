@@ -1,6 +1,7 @@
 #!/bin/bash
 
 bashrc_include_dir="$(dirname $BASH_SOURCE[0])"
+PATH=$PATH:$(dirname $BASH_SOURCE[0])/checkout-recent.sh
 
 gist()
 {
@@ -34,6 +35,7 @@ myfunctochangebranches()
 {
   PS3='Please choose which branch to jump to: '
   IFS=$'\n'; options=( $(git show-recent-branches) ); 
+  COLUMNS=1  # This limits us to 1 column
   select opt in "${options[@]}"
   do
     git checkout $opt
