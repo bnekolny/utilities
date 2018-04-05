@@ -1,7 +1,7 @@
 #!/bin/bash
 
 bashrc_include_dir="$(dirname $BASH_SOURCE[0])"
-PATH=$PATH:$(dirname $BASH_SOURCE[0])/checkout-recent.sh
+PATH=$PATH:$(dirname $BASH_SOURCE[0])/bin
 
 gist()
 {
